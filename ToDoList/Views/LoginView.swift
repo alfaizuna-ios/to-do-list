@@ -14,7 +14,6 @@ struct LoginView: View {
             HeaderView()
             
             // Login Form
-            Form(
             
             
             // Craete Account
