@@ -27,19 +27,11 @@ struct LoginView: View {
                     .textFieldStyle(DefaultTextFieldStyle())
                 SecureField("Password", text: $password)
                     .textFieldStyle(DefaultTextFieldStyle())
-                Button {
-                    // attemp log in
-                } label: {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundStyle(Color.blue)
-                        Text("Log in")
-                            .foregroundStyle(Color.white)
-                            .bold()
-                    }
-                }
-            }
-            // Craete Account
+                TLButton(title: "Log in", background: .blue, action: {
+                    // attemp login
+                }).padding()
+            }.offset(y: -50)
+            // Create Account
             VStack {
                 Text("New around here?")
                 NavigationLink("Create an account", destination: RegisterView())
