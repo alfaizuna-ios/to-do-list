@@ -19,9 +19,17 @@ struct RegisterView: View {
             HeaderView(title: "Register", subTitle: "Start organizing todos", angle: -15, background: .orange)
             
             Form {
-                TextField("Fullname", text: $name).textFieldStyle(DefaultTextFieldStyle())
-                TextField("Email Address", text: $email).textFieldStyle(DefaultTextFieldStyle())
+                TextField("Full Name", text: $name)
+                    .textFieldStyle(DefaultTextFieldStyle())
+                    .autocorrectionDisabled()
+                TextField("Email Address", text: $email)
+                    .textFieldStyle(DefaultTextFieldStyle())
+                    .autocorrectionDisabled()
+                    .autocapitalization(.none)
                 SecureField("Password", text: $password).textFieldStyle(DefaultTextFieldStyle())
+                TLButton(title: "Create Account", background: .green) {
+                    // attemp registration
+                }.padding()
             }.offset(y: -50)
             
             Spacer()
