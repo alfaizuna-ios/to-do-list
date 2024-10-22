@@ -14,5 +14,9 @@ class NewItemViewViewModel: ObservableObject {
     init(){
         
     }
+    
+    func save() {
+        
+    }
 }
 
