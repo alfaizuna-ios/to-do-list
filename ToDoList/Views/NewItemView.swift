@@ -24,6 +24,7 @@ struct NewItemView: View {
                 TLButton(title: "Save", background: .pink) {
                     viewModel.save()
                 }
+                .padding()
             }
         }
     }
